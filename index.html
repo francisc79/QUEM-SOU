@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#4CAF50"> <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <title>Quem Sou Eu?</title>
+    <link rel="icon" type="image/png" href="icone.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="quem-sou.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Quem Sou? Jogo dos Animais 🦁">
+<meta property="og:description" content="Um jogo divertido para descobrir os animais!">
+<meta property="og:image" content="https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/icone.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<!--para iphone IOS-->
+<head>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+</head>
+</head>
+
+<body>
+    <audio id="audio-fundo" src="musica.mp3" loop></audio>
+    <audio id="audio-acerto" src="certo.mp3"></audio>
+    <audio id="audio-vitoria" src="vitoria.mp3"></audio>
+    <audio id="audio-erro" src="errado.mp3"></audio>
+
+    <div id="tela-inicio" class="tela-cheia">
+        <h1 class="titulo-jogo">QUEM SOU EU? 🦁</h1>
+    <br>
+        <button id="btn-comecar" class="btn btn-light btn-lg pulsante">JOGAR ▶</button>
+    </div>
+
+    <div class="container text-center mt-3 d-none" id="conteudo-jogo">
+        
+        <div id="area-pergunta">
+            <div class="moldura-imagem">
+                <img id="imagem-alvo" src="" alt="Animal" class="img-fluid">
+            </div>
+        </div>
+
+        <div id="area-opcoes" class="mt-4">
+            </div>
+
+        <div id="mensagem-vitoria" class="d-none">
+            <h2 class="text-success fw-bold">Muito Bem! 🌟</h2>
+            <p class="lead">Você acertou todos os animais!</p>
+            <button id="btn-reiniciar" class="btn btn-success btn-lg mt-3">Jogar Novamente</button>
+        </div>
+
+    </div>
+
+    <script src="quem-sou.js"></script>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js')
+        .then(() => console.log("SW Registrado!"));
+      }
+    </script>
+</body>
+</html>
