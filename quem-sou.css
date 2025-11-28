@@ -1,0 +1,118 @@
+/* RESET E TEMA */
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    user-select: none;
+    background-color: #e8f5e9; /* Fundo verde bem clarinho */
+    font-family: 'Comic Sans MS', 'Arial', sans-serif; /* Fonte divertida */
+}
+
+/* TELA DE INÍCIO */
+.tela-cheia {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4CAF50; /* Verde Principal */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.titulo-jogo {
+    color: white;
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-shadow: 3px 3px 0px #2E7D32;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.pulsante {
+    animation: pulsar 1.5s infinite;
+    font-weight: bold;
+    color: #4CAF50;
+    padding: 15px 50px;
+    border-radius: 50px;
+}
+
+@keyframes pulsar {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* ÁREA DA IMAGEM */
+#area-pergunta {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.moldura-imagem {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border: 5px solid #81C784;
+    width: 280px;  /* Tamanho fixo para não pular */
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#imagem-alvo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* ÁREA DOS BOTÕES (OPÇÕES) */
+#area-opcoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dois botões lado a lado */
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.botao-opcao {
+    background-color: #fff;
+    border: 3px solid #ddd;
+    border-radius: 15px;
+    padding: 20px 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #555;
+    cursor: pointer;
+    transition: transform 0.1s, background-color 0.2s;
+    box-shadow: 0 5px 0 #ccc;
+}
+
+.botao-opcao:active {
+    transform: translateY(5px);
+    box-shadow: none;
+}
+
+/* Em telas muito pequenas, colocar um botão embaixo do outro */
+@media (max-width: 400px) {
+    #area-opcoes {
+        grid-template-columns: 1fr; /* Uma coluna */
+    }
+    .moldura-imagem {
+        width: 250px;
+        height: 250px;
+    }
+}

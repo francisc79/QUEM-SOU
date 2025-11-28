@@ -1,0 +1,21 @@
+{
+  "name": "Quem Sou?",
+  "short_name": "Quem Sou",
+  "start_url": "./index.html",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#4CAF50",
+  "theme_color": "#4CAF50",
+  "icons": [
+    {
+      "src": "icone.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icone.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
